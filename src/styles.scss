@@ -1,0 +1,370 @@
+$greyBackground :#FAF8F8;
+$carImageBackground: #d5f7f3;
+
+.navbar-item:hover {
+    border-bottom: 3px solid blue;
+    transition: border-color 0.5s ease-out;
+}
+
+.navbar-item {
+    border-bottom: 3px solid $greyBackground;
+    transition: border-color 0.5s ease-out;
+}
+
+.navbar .megamenu {
+    padding: 1rem;
+
+    .megamenu-left {
+        padding-left: 2rem;
+        padding-top: 2rem;
+        background-color: $greyBackground;
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            display: flex;
+            margin-top: 2rem;
+            text-decoration: none;
+            border-left: 3px solid $greyBackground;
+            transition: border-color 0.5s ease-out;
+        }
+
+        a:hover {
+            border-left: 3px solid blue;
+            transition: border-color 0.5s ease-out;
+        }
+    }
+
+    .megamenu-content {
+        margin-left: 1rem;
+        padding-bottom: 3rem;
+
+        svg {
+            margin-right: 1rem;
+        }
+
+        a {
+            margin-top: 2rem;
+            text-decoration: none;
+            font-size: larger;
+            color: #000;
+            font-weight: 400;
+
+        }
+
+        p {
+            margin-top: 2rem;
+            font-weight: 400;
+        }
+
+        div {
+            margin-top: 2rem;
+            border-left: 3px solid white;
+            transition: border-color 0.5s ease-out;
+
+            a {
+                font-weight: bold;
+            }
+        }
+
+        div:hover {
+            border-left: 3px solid blue;
+            transition: border-color 0.5s ease-out;
+
+            .mega-menu-small-content,
+            a {
+                color: blue;
+            }
+
+        }
+
+        .mega-menu-small-content {
+            font-size: small;
+        }
+    }
+}
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+
+    .navbar .has-megamenu {
+        position: static !important;
+    }
+
+    .navbar .megamenu {
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 0;
+    }
+
+}
+
+/* ============ desktop view .end// ============ */
+
+/* ============ mobile view ============ */
+@media(max-width: 991px) {
+
+    .navbar.fixed-top .navbar-collapse,
+    .navbar.sticky-top .navbar-collapse {
+        overflow-y: auto;
+        max-height: 90vh;
+        margin-top: 10px;
+    }
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+
+
+.top-div {
+    h2 {
+        color: white;
+        padding-top: 5rem;
+        font-size: 50px;
+    }
+
+    p {
+        color: white;
+        font-size: large;
+        padding-top: 2rem;
+    }
+}
+
+
+
+.sliding-logos {
+    height: 100px;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+
+    .sliding-banner {
+        background-color: #fff;
+        padding: 30px 0px;
+        position: absolute;
+        white-space: nowrap;
+        animation: bannermove 15s linear infinite;
+        -webkit-animation: bannermove 15s linear infinite;
+
+        img {
+            margin: 0 80px;
+            max-width: 150px;
+            max-height: 45px;
+
+        }
+    }
+
+    @keyframes bannermove {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(-50%, 0);
+            -webkit-transform: translate(-50%, 0);
+            -moz-transform: translate(-50%, 0);
+            -ms-transform: translate(-50%, 0);
+            -o-transform: translate(-50%, 0);
+        }
+    }
+}
+
+.products {
+    padding-top: 3rem;
+    background-color: $greyBackground;
+    padding-bottom: 4rem;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    h5 {
+        text-align: center;
+    }
+
+    .card-image {
+        background-color: $carImageBackground;
+
+        svg {
+            margin-left: 0.5rem;
+            margin-top: 0.5rem;
+        }
+    }
+
+    .card-row {
+        padding-top: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .card-button {
+        margin-left: 1.5rem;
+        margin-top: 6rem;
+    }
+
+}
+
+.leading-location {
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+
+    .sub-title {
+        color: #33f;
+    }
+
+    .paragraphs {
+        margin-top: 2rem;
+    }
+
+    .under-video {
+        margin-top: 3rem;
+    }
+}
+
+.learn-about {
+    background-color: $greyBackground;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
+    h2 {
+        font-size: 48px;
+    }
+
+    .about-card {
+        background-color: white;
+        margin-top: 2rem;
+    }
+
+    .about-card-image {
+        margin: 2rem;
+    }
+
+    .about-content {
+        margin-top: 5rem;
+
+        span {
+            background-color: #d5f7f3;
+            padding: 0.5rem;
+        }
+
+        h3 {
+            margin-top: 2rem;
+        }
+
+        a {
+            border: 0.0556rem solid #000;
+            margin-top: 2rem;
+        }
+    }
+
+
+    .small-about-content {
+        margin-top: 2rem;
+
+        span {
+            background-color: #d5f7f3;
+            padding: 0.5rem;
+        }
+
+        h6 {
+            margin-top: 1.2rem;
+        }
+
+        a {
+            border: 0.0556rem solid #000;
+            margin-top: 1.5rem;
+
+        }
+    }
+
+}
+
+.bottom-sliding-logos {
+    margin-bottom: 5rem;
+
+    p {
+        font-size: larger;
+        margin-top: 3rem;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-bottom: 4rem;
+    }
+}
+
+.big-blue-section {
+    position: relative;
+    margin-bottom: 5rem;
+
+    .bg {
+        background-color: #3432FF;
+
+        .content {
+            position: absolute;
+            top: 30%;
+            left: 60%;
+            color: white;
+            width: 30%;
+
+            @media screen and (max-width: 600px) {
+                position: relative;
+            }
+
+            @media screen and (max-width: 1200px) {
+                top: 0;
+                left: 0;
+                text-align: center;
+                position: relative;
+            }
+
+            h2 {
+                font-size: 56px;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $greyBackground;
+    padding-bottom: 2rem;
+
+    .footer-base-div {
+        padding-top: 3rem;
+    }
+
+    .footer-bold-p {
+        font-size: larger;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .footer-bottoms {
+        margin-top: 15rem;
+
+        .licance {
+            font-family: SometypeMono-Regular, Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace, monospace;
+        }
+    }
+
+
+    .footer-logos {
+        float: right;
+    }
+}
